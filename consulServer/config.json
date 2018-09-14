@@ -4,5 +4,5 @@
   "log_level": "INFO",
   "node_name": "mynode",
   "server": true,
-  "bootstrap-expect": 2
+  "bootstrap_expect": 2
 }
