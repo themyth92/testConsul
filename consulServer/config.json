@@ -1,8 +1,9 @@
 {
   "datacenter": "aws",
-  "data_dir": "/opt/consul",
+  "data_dir": "/testConsul/consulServer",
   "log_level": "INFO",
   "node_name": "mynode",
   "server": true,
-  "bootstrap_expect": 2
+  "bootstrap_expect": 2,
+  "retry_join": ["provider=aws tag_key=environment tag_value=consul_server"]
 }
