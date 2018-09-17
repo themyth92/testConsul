@@ -1,0 +1,14 @@
+{
+  "datacenter": "aws",
+  "data_dir": "/testConsul/consulClient",
+  "log_level": "INFO",
+  "server": false,
+  "retry_join": ["provider=aws tag_key=environment tag_value=consul_server"],
+  "check": {
+    "id": "grpc-check",
+    "name": "Health check",
+    "grpc": "localhost:3000",
+    "grpc_use_tls": false,
+    "interval": "10s"
+  }
+}
