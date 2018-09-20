@@ -13,9 +13,14 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 nvm install 10
 nvm use 10
 
+cd /grpc-test
+npm install -g yarn
+yarn
+
 # need detach process
-cmd="node gprc-test/server.js"
-"${cmd}" &>/dev/null &!;
+nohup node server.js &>/dev/null &
+
+cd ..
 
 # now start consul
 consul agent -config-file ./testConsul/consulClient/config.json
